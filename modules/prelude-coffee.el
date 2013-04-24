@@ -51,6 +51,7 @@
      ;; Emacs key binding
      (define-key coffee-mode-map [(meta r)] 'coffee-compile-buffer)
 
+     ;; Riding edge.
      (setq coffee-command "coffee")
 
      (defun prelude-coffee-mode-defaults ()
