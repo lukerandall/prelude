@@ -21,3 +21,5 @@ session*
 .cask
 tramp
 /var/pcache
+.mc-lists.el
+/var
