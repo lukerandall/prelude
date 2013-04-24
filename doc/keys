@@ -118,6 +118,7 @@ C-x C-q         toggle-read-only
 C-c r           rename-buffer
 C-c D           prelude-delete-file-and-buffer
 C-c k           prelude-kill-other-buffers
+M-~             not-modified
 
 ## buffer-menu
 
@@ -194,6 +195,7 @@ M-^             delete-indentation
 C-M-o           split-line
 C-M-\           prelude-indent-region-or-buffer
 C-x TAB         indent-rigidly
+C-M-z           prelude-indent-defun
 
 ## Highlighting
 
@@ -243,6 +245,8 @@ M-b             backward-word
 M-f             forward-word
 C-M-b           backward-sexp
 C-M-f           forward-sexp
+C-M-u           up-list
+C-M-d           down-list
 M-e             forward-sentence
 M-a             backward-sentence
 C-M-a           beginning-of-defun
@@ -301,13 +305,14 @@ M-`		jump-to-mark
 # Search
 
 C-s             isearch-forward
+C-r             isearch-backward
 C-M-s           isearch-forward-regexp
 C-M-r           isearch-backward-regexp
-M-s _           isearch-toggle-symbol
+M-s _           isearch-forward-symbol
 M-s w           isearch-forward-word  - search for words, ignoring separators
-occur - search for occurrences
-multi-occur
-multi-occur-in-matching-buffer
+M-s o           occur - search for occurrences
+                multi-occur
+                multi-occur-in-matching-buffer
 
 ## isearch
 
@@ -334,6 +339,8 @@ M-g p          previous-error
 
 C-x g           magit-status
 C-x v =         vc-diff
+C-x v u         vc-revert
+C-x v D         vc-root-diff
 
 
 # Undo
