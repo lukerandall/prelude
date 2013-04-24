@@ -16,7 +16,6 @@
 (global-set-key [remap goto-line] 'goto-line-with-feedback)
 (global-set-key "\C-x\C-\\" 'goto-last-change)
 (global-set-key "%" 'match-paren)
-(global-set-key (kbd "C-`") 'push-mark-no-activate)
 (global-set-key (kbd "M-`") 'jump-to-mark)
 (global-set-key (kbd "C-c C-c C-f") 'ffap)
 (global-set-key (kbd "C-x C-r") 'prelude-sudo-edit)

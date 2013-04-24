@@ -295,7 +295,7 @@ C-x =           what-cursor-position - C-u before shows expanded info
 C-x C-x		prelude-exchange-point-and-mark
 C-u C-SPC	cycle marks
 C-x C-SPC	pop-global-mark
-C-`		push-mark-no-activate
+C-SPC C-SPC     push-mark-no-activate
 M-`		jump-to-mark
 
 # Search
