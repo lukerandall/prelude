@@ -1,0 +1,363 @@
+# Help
+
+C-h C-h         help-for-help
+C-h b           describe-bindings
+C-h f           describe-function
+C-h k           describe-key
+C-h m           describe-mode
+C-h s           describe-syntax
+_-_ C-h         show all key bindings with _-_ as a prefix
+
+
+# General
+
+M--             negative-argument
+C-u             universal-argument
+C-x z           repeat - followed by z to continue repeating
+C-x m           eshell
+C-x M-:         repeat-complex-command
+
+
+# Lisp
+
+M-x             smex
+M-X             smex-major-mode-commands
+
+## smex
+
+C-h f           describe function on selected command
+M-.             jump to definition of selected command
+C-h w           keybindings for selected command
+smex-show-unbound-commands - frequently used commands without a binding
+
+
+# Navigation
+
+C-c f           prelude-recentf-ido-find-file
+C-x C-f         ido-find-file           
+C-x b           ido-switch-buffer
+C-x C-b         ibuffer
+C-x r m         bookmark-set - save a named bookmark
+C-x r b         bookmark-jump
+C-x r l         bookmark-bmenu-list
+C-c h           helm-prelude (see https://github.com/emacs-helm/helm/wiki)
+C-c C-c C-f     ffap - find file at point
+
+## ido-find-file
+
+//              go to root
+~/              go to home
+C-d             ido-magic-delete-char - perform magic action (at end of user input it opens directory in dired)
+C-j             ido-select-text - create new file with entered text
+C-SPC           ido-restrict-to-matches
+M-p             ido-previous-work-directory
+M-n             ido-next-work-directory
+M-k             ido-forget-work-directory
+M-s             ido-merge-work-directories
+M-m             ido-make-directory
+
+## projectile
+
+C-c p s         projectile-switch-project
+C-c p a         projectile-ack
+C-c p k 	projectile-kill-buffers
+
+C-c p f 	Display a list of all files in the project. With a prefix argument it will clear the cache first.
+C-c p T 	Display a list of all test files(specs, features, etc) in the project.
+C-c p g 	Run grep on the files in the project.
+C-c p b 	Display a list of all project buffers currently open.
+C-c p o 	Runs multi-occur on all project buffers currently open.
+C-c p r 	Runs interactive query-replace on all files in the projects.
+C-c p i 	Invalidates the project cache (if existing).
+C-c p R 	Regenerates the projects TAGS file.
+C-c p d 	Opens the root of the project in dired.
+C-c p e 	Shows a list of recently visited project files.
+C-c p l 	Runs a standard compilation command for your type of project.
+C-c p p 	Runs a standard test command for your type of project.
+C-c p z 	Adds the currently visited to the cache.
+
+# Windows
+
+C-x o           switch-window
+C-x O           prelude-previous-window
+C-x 0           kill-window
+C-x 1           delete-other-windows
+C-x 2           split-window-below
+C-x 3           split-window-right
+C-x 4 b         ido-switch-buffer-other-window
+C-x 4 f         ido-find-file-other-window
+C-x 4 c         clone-indirect-buffer-other-window
+C-x 4 d         dired-other-window
+C-x 4 .         find-tag-other-window
+C-c ←           winner-undo - switch to earlier window configuration
+C-c →           winner-redo - switch to later window configuration
+C-c s           prelude-swap-windows
+C-c C-r         rotate-windows
+C-x }           enlarge-window-horizontally
+
+
+# Frames
+
+C-x 5 C-o       display-buffer-other-frame
+C-x 5 .         find-tag-other-frame
+C-x 5 0         delete-frame
+C-x 5 1         delete-other-frames
+C-x 5 2         make-frame-command
+C-x 5 b         switch-to-buffer-other-frame
+C-x 5 d         dired-other-frame
+C-x 5 f         find-file-other-frame
+C-x 5 m         compose-mail-other-frame
+C-x 5 o         other-frame
+C-x 5 r         find-file-read-only-other-frame
+
+
+# Buffers
+
+C-x k           ido-kill-buffer
+C-x C-q         toggle-read-only
+C-c r           rename-buffer
+C-c D           prelude-delete-file-and-buffer
+C-c k           prelude-kill-other-buffers
+
+## buffer-menu
+
+d               delete buffer
+k               kill (aka delete) buffer
+C-d             delete buffer and move up
+x               apply changes
+s               save buffer
+~               mark buffer unmodified
+1               open selected in full screen window
+2               open selected in right window, previous buffer in left
+f               open selected in place of buffer window
+o               open selected in another window
+
+
+# Text
+
+M-c             capitalize-word
+M-l             downcase-word
+M-u             upcase-word
+C-x C-l         downcase-region
+C-x C-u         upcase-region
+C-M-SPC         mark-sexp
+C-y             yank - restore deleted text at point
+C-o             open-line
+C-c n           prelude-cleanup-buffer
+M-/             hippie-expand
+C-x C-o         delete-blank-lines
+C-c d           prelude-duplicate-current-line-or-region
+C-M-%           query-replace-regexp
+C-k             kill-line
+M-d             kill-word
+M-k             kill-sentence
+C-w             kill-region
+M-z             zap-to-char
+C-x DEL         backward-kill-sentence
+M-DEL           backward-kill-word
+S-RET           prelude-smart-open-line
+C-S-RET         prelude-smart-open-line-above
+M-S-↑           prelude-move-line-up
+M-S-↓           prelude-move-line-down
+M-SPC           just-one-space
+M-=             count-words-region
+
+## Registers
+
+C-x r SPC       point-to-register
+C-x r +         increment-register
+C-x r f         frame-configuration-to-register
+C-x r i         insert-register
+C-x r j         jump-to-register
+C-x r n         number-to-register
+C-x r s         copy-to-register
+C-x r w         window-configuration-to-register
+C-x r x         copy-to-register
+
+
+## Rectangles
+
+C-x r M-w       copy-rectangle-as-kill
+C-x r N         rectangle-number-lines
+C-x r c         clear-rectangle
+C-x r d         delete-rectangle
+C-x r k         kill-rectangle
+C-x r o         open-rectangle
+C-x r r         copy-rectangle-to-register
+C-x r y         yank-rectangle
+C-x r t         string-rectangle
+
+
+## Indentation
+
+M-^             delete-indentation
+C-M-o           split-line
+C-M-\           prelude-indent-region-or-buffer
+C-x TAB         indent-rigidly
+
+## Highlighting
+
+M-s h l         highlight-lines-matching-regexp
+M-s h p         highlight-phrase
+M-s h r         highlight-regexp
+M-s h u         unhighlight-regexp
+M-s h w         hi-lock-write-interactive-patterns
+M-s h f         hi-lock-find-patterns
+
+
+## Comments
+
+M-;		comment-dwim
+C-u M-;		comment-kill
+C-x ;		comment-set-column
+C-M-j		comment-indent-new-line
+                comment-region
+
+## Ruby
+
+C-'		ruby-tools-to-single-quote-string
+C-"		ruby-tools-to-double-quote-string
+C-:		ruby-tools-to-symbol
+C-; 		ruby-tools-clear-string
+
+
+# Selection
+
+M-h             mark-paragraph
+C-M-h		mark-defun
+C-SPC		set-mark-command
+C-x h		mark-whole-buffer
+C-x C-x     	prelude-exchange-point-and-mark
+C-=		expand-region
+
+
+# Movement
+
+C-c i		prelude-ido-goto-symbol
+C-a		move-beginning-of-line
+C-e		move-end-of-line
+M-m             back-to-indentation
+C-b             backward-char
+C-f             forward-char
+M-b             backward-word
+M-f             forward-word
+C-M-b           backward-sexp
+C-M-f           forward-sexp
+M-e             forward-sentence
+M-a             backward-sentence
+C-M-a           beginning-of-defun
+C-M-e           end-of-defun
+C-p             previous-line
+C-n             next-line
+M-{             backward-paragraph
+M-}             forward-paragraph
+M-r             move-to-window-line-top-bottom
+M-<             beginning-of-buffer
+M->             end-of-buffer
+C-v             scroll-up-command
+M-v             scroll-down-command
+C-M-v           scroll-other-window
+C-M-S-v         scroll-other-window-down
+M-g g           goto-line
+C-l             recenter-top-bottom
+C-M-l           reposition-window - make current definition and/or comment visible
+C-c SPC         ace-jump-mode
+C-c C-c TAB     imenu-anywhere
+C-x C-\         goto-last-change
+ack
+ack-same
+
+
+## Fastnav
+
+M-z	        fastnav-zap-up-to-char-forward
+M-Z	        fastnav-zap-up-to-char-backward
+M-s	        fastnav-jump-to-char-forward
+M-S	        fastnav-jump-to-char-backward
+M-r	        fastnav-replace-char-forward
+M-R	        fastnav-replace-char-backward
+M-i	        fastnav-insert-at-char-forward
+M-I	        fastnav-insert-at-char-backward
+M-j	        fastnav-execute-at-char-forward
+M-J	        fastnav-execute-at-char-backward
+M-k	        fastnav-delete-char-forward
+M-K	        fastnav-delete-char-backward
+M-m	        fastnav-mark-to-char-forward
+M-M	        fastnav-mark-to-char-backward
+
+M-p	        fastnav-sprint-forward
+M-P	        fastnav-sprint-backward
+
+
+# Point
+
+C-x =           what-cursor-position - C-u before shows expanded info
+C-x C-x		prelude-exchange-point-and-mark
+C-u C-SPC	cycle marks
+C-x C-SPC	pop-global-mark
+C-`		push-mark-no-activate
+M-`		jump-to-mark
+
+# Search
+
+C-s             isearch-forward
+C-M-s           isearch-forward-regexp
+C-M-r           isearch-backward-regexp
+M-s _           isearch-toggle-symbol
+M-s w           isearch-forward-word  - search for words, ignoring separators
+occur - search for occurrences
+multi-occur
+multi-occur-in-matching-buffer
+
+## isearch
+
+C-o             open occur with searched term
+C-w             isearch-yank-word-or-char
+C-y             isearch-yank-kill
+C-M-w           isearch-yank-symbol
+M-c             isearch-toggle-case-fold
+M-n             isearch-ring-advance
+M-p             isearch-ring-retreat
+C-RET           isearch-exit-other-end
+M-z             zap-to-isearch
+
+## occur
+
+C-x C-q         read-only-mode - edit occur buffer propagates changes
+
+## ack, occur, others
+
+M-g n          next-error
+M-g p          previous-error
+
+# VCS
+
+C-x g           magit-status
+C-x v =         vc-diff
+
+
+# Undo
+
+C-/             undo-tree-undo
+C-?             undo-tree-redo
+C-x u           undo-tree-visualize
+C-x r u         undo-tree-save-state-to-register
+C-x r U         undo-tree-restore-state-from-register
+
+## undo-tree-visualize mode
+
+p               undo changes
+n               redo changes
+f               next branch
+b               previous branch
+s               toggle selection mode
+t               toggle timestamps
+q               quit visualizer
+C-q             abort visualizer
+
+see https://github.com/emacsmirror/undo-tree/blob/master/undo-tree.el
+
+# More
+
+http://www.math.uh.edu/~bgb/emacs_keys.html
+http://karl-voit.at/vim-emacs-cheatsheet_of_freezing_hell.txt
