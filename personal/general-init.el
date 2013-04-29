@@ -17,6 +17,9 @@
 (global-set-key (kbd "C-x C-r") 'prelude-sudo-edit)
 (global-set-key (kbd "M-H") 'prelude-switch-to-previous-buffer)
 
+;; key chords
+(key-chord-define-global "jf" 'projectile-find-file)
+
 ;; variables
 (setq projectile-show-paths-function 'projectile-hashify-with-relative-paths)
 (setq mac-right-option-modifier 'control)
