@@ -161,6 +161,7 @@ C-S-RET         prelude-smart-open-line-above
 M-S-↑           prelude-move-line-up
 M-S-↓           prelude-move-line-down
 M-SPC           just-one-space
+M-\             delete-horizontal-space
 M-=             count-words-region
 
 ## Registers
@@ -342,6 +343,16 @@ C-x v =         vc-diff
 C-x v u         vc-revert
 C-x v D         vc-root-diff
 
+
+# Macros
+
+C-x (           kmacro-start-macro
+C-x )           kmacro-end-macro
+C-x e           kmacro-end-and-call-macro
+C-x q           kbd-macro-query
+C-x C-k C-e     kmacro-edit-macro-repeat
+C-x C-k b       kmacro-bind-to-key
+C-x C-k N       keyboard-macro bound to N
 
 # Undo
 
