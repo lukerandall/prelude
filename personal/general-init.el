@@ -38,3 +38,5 @@
 (setq mac-right-option-modifier 'control)
 (setq ack-and-a-half-arguments "")
 (setq coffee-command "coffee")
+
+(setq gc-cons-threshold 20000000)
