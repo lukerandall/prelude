@@ -5,5 +5,4 @@
 (diminish 'projectile-mode)
 (diminish 'whitespace-mode)
 (diminish 'flyspell-mode " »")
-(eval-after-load 'paredit-mode '(diminish 'paredit-mode " ⊙"))
 (eval-after-load 'guru-mode '(diminish 'guru-mode))

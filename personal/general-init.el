@@ -1,8 +1,6 @@
 (require 'rinari)
 (require 'smartparens-config)
 
-(electric-indent-mode 1)
-
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; navigation & marks
