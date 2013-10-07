@@ -29,6 +29,11 @@
 (define-key global-map [?\s-p] 'dash-at-point)
 (define-key global-map [?\s-r] 'split-window-right)
 
+(define-key global-map (kbd "H-h") 'windmove-left)
+(define-key global-map (kbd "H-t") 'windmove-down)
+(define-key global-map (kbd "H-n") 'windmove-up)
+(define-key global-map (kbd "H-s") 'windmove-right)
+
 ;; key chords
 (key-chord-define-global "jf" 'projectile-find-file)
 
