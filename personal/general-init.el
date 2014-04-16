@@ -1,9 +1,12 @@
 (require 'rinari)
 (require 'smartparens-config)
 
+(yas-global-mode)
+
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; navigation & marks
+(global-set-key (kbd "\C-c\C-c\C-c") 'comment-or-uncomment-region)
 (global-set-key (kbd "C-c C-c C-i") 'imenu-anywhere)
 (global-set-key (kbd "C-c C-y") 'browse-kill-ring)
 (global-set-key (kbd "C-c C-e") 'eval-buffer)
@@ -42,5 +45,7 @@
 (setq mac-right-option-modifier 'control)
 (setq ack-and-a-half-arguments "")
 (setq coffee-command "coffee")
+(custom-set-variables '(coffee-tab-width 2))
+(setq whitespace-action '(auto-cleanup))
 
 (setq gc-cons-threshold 20000000)

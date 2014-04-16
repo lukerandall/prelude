@@ -1,6 +1,6 @@
 (require 'diminish)
 
-(diminish 'yas-minor-mode)
+;; (diminish 'yas-minor-mode)
 (diminish 'prelude-mode)
 (diminish 'projectile-mode)
 (diminish 'whitespace-mode)
