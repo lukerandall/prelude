@@ -74,7 +74,7 @@
 
 ;; use zenburn as the default theme
 ;; (load-theme 'zenburn t)
-(load-theme 'twilight-anti-bright t)
+(load-theme 'twilight-bright t)
 
 (provide 'prelude-ui)
 ;;; prelude-ui.el ends here
