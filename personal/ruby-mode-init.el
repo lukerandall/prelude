@@ -3,8 +3,6 @@
   (interactive)
   (occur "^\\s-*\\\(class \\\|module \\\|def \\\|[^:]include \\\|private\\b\\\|protected\\b\\\)"))
 
-(define-key ruby-mode-map (kbd "C-c C-t") 'rgc-show-ruby-tags)
-
 (add-hook 'ruby-mode-hook 'robe-mode)
 
 ;; - M-. to jump to the definition

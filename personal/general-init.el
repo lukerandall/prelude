@@ -1,4 +1,3 @@
-(require 'rinari)
 (require 'smartparens-config)
 
 (yas-global-mode)
